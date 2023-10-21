@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+.recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+}
+
+.recommendation-item {
+  margin-bottom: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.recommendation {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+}
+
+.recommendation-content {
+  padding: 8px;
+  flex: 1;
+}
+
+.recommendation-image {
+  display: block;
+  height: 250px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+img[src$=".jpg"]:not([src*="custom-image.jpg"])::before {
+  content: "Image Not Found";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #999;
+}
+
+@media (max-width: 700px) {
+  .recommendations-container {
+    grid-template-columns: auto;
+  }
+}
