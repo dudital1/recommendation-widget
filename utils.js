@@ -3,3 +3,9 @@ export const createDivWithClassName = (className) => {
   element.classList.add(className);
   return element;
 };
+
+export const appendMany = (parent, children) => {
+  children.forEach((child) => {
+    parent.appendChild(child);
+  });
+};
