@@ -3,12 +3,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recommendations Widget</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <main>
-      <div class="recommendations-container"></div>
+      <div class="widget-header">
+        <img src="./assets/Taboola_logo.svg" alt="taboola-header-logo" />
+        <div class="header-toggle-layout">
+          <button id="grid-toggle" class="header-toggle-btn selected">
+            <img
+              src="./assets/grid.svg"
+              height="20px"
+              alt="toggle-option-grid"
+            />
+          </button>
+          <button id="list-toggle" class="header-toggle-btn">
+            <img
+              src="./assets/list.svg"
+              height="20px"
+              alt="toggle-option-row"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div id="widget-container" class="widget-container"></div>
+      <div id="loader" class="loader"></div>
     </main>
     <script type="module" src="script.js"></script>
   </body>
