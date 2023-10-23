@@ -6,11 +6,12 @@ import {
   SOURCE_ID,
   SOURCE_TYPE,
 } from "../utils/constants.js";
+import { mockRecommendations } from "../utils/recommendationsMockData.js";
 
 describe("RecommendationAPI", () => {
   test("fetchRecommendations should fetch recommendations", async () => {
     global.fetch = jest.fn().mockResolvedValue({
-      json: jest.fn().mockResolvedValue({ recommendations: [] }),
+      json: jest.fn().mockResolvedValue({ mockRecommendations }),
     });
 
     const recommendationAPI = new RecommendationAPI(
@@ -26,7 +27,7 @@ describe("RecommendationAPI", () => {
     expect(fetch).toHaveBeenCalledWith(
       `https://api.taboola.com/1.0/json/taboola-templates/recommendations.get?app.type=${APP_TYPE}&app.apikey=${API_KEY}&count=${COUNT}&source.type=${SOURCE_TYPE}&source.id=${SOURCE_ID}`
     );
-    expect(recommendations).toEqual({ recommendations: [] });
+    expect(recommendations).toEqual({ mockRecommendations });
   });
 
   test("fetchRecommendations should handle errors", async () => {

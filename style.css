@@ -172,14 +172,8 @@ main {
   opacity: 1;
 }
 
-img:not([src*=""])::before {
-  display: block;
-  background-color: var(--neutral);
-  content: "Image Not Found";
-  height: 150px;
-  line-height: 150px;
-  font-size: var(--text-small);
-  text-align: center;
+.error-image {
+  object-fit: contain;
 }
 
 @keyframes spin {

@@ -1,6 +1,6 @@
 import { createDivWithClassName, appendMany } from "../utils/utils.js";
 import { RecommendationAPI } from "../api/recommendations-api.js";
-import { RecommendationOrigin } from "../utils/enums.js";
+import { RecommendationOriginHandler } from "../utils/recommendationHandler.js";
 import {
   API_KEY,
   APP_TYPE,
@@ -130,19 +130,9 @@ export class Widget {
   }
 
   recommendationClickHandler(recommendation) {
-    switch (recommendation.origin) {
-      case RecommendationOrigin.SPONSORED:
-        window.open(recommendation.url, "_blank");
-        break;
-
-      case RecommendationOrigin.ORGANIC:
-        window.location.href = recommendation.url;
-        break;
-
-      // add another switch case for other types of recommendation
-      default:
-        break;
-    }
+    const handler =
+      RecommendationOriginHandler[recommendation.origin || "defaultHandler"];
+    handler(recommendation.url);
   }
 
   buildRecommendationCard(recommendation) {
@@ -152,7 +142,7 @@ export class Widget {
             alt="${recommendation.name}"
             src="${recommendation.thumbnail[0].url}"
             class="recommendation-image"
-            onerror="this.classList.add('fallback-image');"
+            onerror="this.src='./assets/warning.svg'; this.alt='Image not found'; this.classList.add('error-image');"
         />
         <div class="recommendation-content">
           <span class="recommendation-title">${recommendation.name}</span>
