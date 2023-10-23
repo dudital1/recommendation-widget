@@ -24,7 +24,7 @@ describe("RecommendationAPI", () => {
     const recommendations = await recommendationAPI.fetchRecommendations();
 
     expect(fetch).toHaveBeenCalledWith(
-      `http://api.taboola.com/1.0/json/taboola-templates/recommendations.get?app.type=${appType}&app.apikey=${apiKey}&count=${count}&source.type=${sourceType}&source.id=${sourceId}`
+      `https://api.taboola.com/1.0/json/taboola-templates/recommendations.get?app.type=${appType}&app.apikey=${apiKey}&count=${count}&source.type=${sourceType}&source.id=${sourceId}`
     );
     expect(recommendations).toEqual({ recommendations: [] });
   });
@@ -51,7 +51,7 @@ describe("RecommendationAPI", () => {
     const recommendations = await recommendationAPI.fetchRecommendations();
 
     expect(fetch).toHaveBeenCalledWith(
-      `http://api.taboola.com/1.0/json/taboola-templates/recommendations.get?app.type=${appType}&app.apikey=${apiKey}&count=${count}&source.type=${sourceType}&source.id=${sourceId}`
+      `https://api.taboola.com/1.0/json/taboola-templates/recommendations.get?app.type=${appType}&app.apikey=${apiKey}&count=${count}&source.type=${sourceType}&source.id=${sourceId}`
     );
     expect(recommendations).toBeUndefined();
     expect(errorSpy).toHaveBeenCalledWith(
