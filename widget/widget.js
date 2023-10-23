@@ -165,7 +165,7 @@ export class Widget {
   }
 
   buildErrorState() {
-    this.errorsStateLogic(
+    this.errosStateBuilder(
       ERROR_STATE_TITLE,
       "./assets/error.svg",
       "error-logo"
@@ -173,14 +173,14 @@ export class Widget {
   }
 
   buildEmptyState() {
-    this.errorsStateLogic(
+    this.errosStateBuilder(
       EMPTY_STATE_TITLE,
       "./assets/warning.svg",
       "no-recommendations-logo"
     );
   }
 
-  errorsStateLogic(title, imageSrc, imgAlt) {
+  errosStateBuilder(title, imageSrc, imgAlt) {
     const errorsWrapper = createDivWithClassName("errors-wrapper");
     errorsWrapper.innerHTML = `
       <h1 class="title">
