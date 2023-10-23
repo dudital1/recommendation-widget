@@ -1,7 +1,8 @@
 :root {
-  --main-color: #2c0000;
+  --primary: #054064;
   --secondary-color: #b1aba4;
   --neutral: #f5f4f4;
+  --neutral-2: #28282b;
   --app-font: "Montserrat", sans-serif;
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -35,7 +36,7 @@ main {
   margin: auto;
   padding: var(--spacing-0) var(--spacing-4);
   background-color: var(--neutral);
-  color: var(--main-color);
+  color: var(--neutral-2);
 }
 
 #recommendations-widget {
@@ -100,7 +101,7 @@ main {
   display: flex;
   gap: var(--spacing-2);
   padding: var(--spacing-3);
-  color: var(--main-color);
+  color: var(--neutral-2);
   height: 150px;
 }
 
@@ -156,7 +157,7 @@ main {
 .loader {
   visibility: hidden;
   opacity: 0;
-  border: 4px solid var(--main-color);
+  border: 4px solid var(--primary);
   border-top: 4px solid var(--neutral);
   border-radius: 50%;
   margin: auto;

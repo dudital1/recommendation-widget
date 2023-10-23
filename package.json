@@ -1,0 +1,27 @@
+{
+  "name": "recommendation-widget",
+  "version": "1.0.0",
+  "description": "david tal - taboola recommendation widget",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudital1/recommendation-widget.git"
+  },
+  "keywords": [],
+  "author": "David Tal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dudital1/recommendation-widget/issues"
+  },
+  "homepage": "https://github.com/dudital1/recommendation-widget#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

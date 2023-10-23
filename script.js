@@ -1,4 +1,4 @@
-import { Widget } from "./widget.js";
+import { Widget } from "./widget/widget.js";
 
 // run application
 document.addEventListener("DOMContentLoaded", async () => {

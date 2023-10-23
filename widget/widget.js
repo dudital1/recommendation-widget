@@ -1,6 +1,6 @@
-import { createDivWithClassName, appendMany } from "./utils.js";
-import { RecommendationAPI } from "./recommendations-api.js";
-import { RecommendationOrigin } from "./enums.js";
+import { createDivWithClassName, appendMany } from "../utils/utils.js";
+import { RecommendationAPI } from "../api/recommendations-api.js";
+import { RecommendationOrigin } from "../utils/enums.js";
 import {
   API_KEY,
   APP_TYPE,
@@ -9,7 +9,7 @@ import {
   ERROR_STATE_TITLE,
   SOURCE_ID,
   SOURCE_TYPE,
-} from "./constants.js";
+} from "../utils/constants.js";
 
 export class Widget {
   // dom elements references
