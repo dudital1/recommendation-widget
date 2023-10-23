@@ -42,7 +42,7 @@ export class Widget {
   }
 
   initDomElements() {
-    this.widgetHeaderElement = createDivWithClassName("widget-header");
+    // this.widgetHeaderElement = createDivWithClassName("widget-header");
     this.widgetContainerElement = createDivWithClassName(
       "recommendations-container"
     );
