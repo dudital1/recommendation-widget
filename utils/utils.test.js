@@ -1,4 +1,4 @@
-const { createDivWithClassName, appendMany } = require("../utils/utils.js");
+import { appendMany, createDivWithClassName } from "./utils.js";
 
 describe("createDivWithClassName", () => {
   test("it should create a div with the given class name", () => {
